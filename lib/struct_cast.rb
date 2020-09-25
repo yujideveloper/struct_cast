@@ -28,7 +28,7 @@ module StructCast
   end
   private_constant :CoreExt
 
-  refine ::Kernel do
+  module Method
     using CoreExt
 
     def Struct(args)
@@ -40,5 +40,14 @@ module StructCast
         ::Struct.new(*hash.keys, keyword_init: true).new(**hash)
       end
     end
+  end
+  private_constant :Method
+
+  refine ::Kernel do
+    include Method
+  end
+
+  refine ::Kernel.singleton_class do
+    include Method
   end
 end
