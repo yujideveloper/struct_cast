@@ -9,13 +9,12 @@ name: Ruby
 
 on: [push, pull_request]
 
-strategy:
-  matrix:
-    ruby: [2.5, 2.6, 2.7]
-
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby: [2.5, 2.6, 2.7]
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
