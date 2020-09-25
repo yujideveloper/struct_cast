@@ -1,6 +1,21 @@
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  NewCops: enable
+
 Naming/MethodName:
   IgnoredPatterns:
     - Struct
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
 
 Style/Documentation:
   Enabled: false
