@@ -89,6 +89,13 @@ RSpec.describe StructCast do
         it { is_expected.to have_attributes(id: 1, name: "foo") }
       end
 
+      context "when args is a empty hash" do
+        let!(:args) { {} }
+
+        it { is_expected.to be_a ::Struct }
+        it { is_expected.to satisfy { |struct| struct.members.empty? } }
+      end
+
       context "when args is non-hash-like object that does not respond to :to_hash or :to_h" do
         let!(:args) do
           c = Class.new do

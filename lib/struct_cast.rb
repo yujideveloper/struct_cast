@@ -34,7 +34,11 @@ module StructCast
     def Struct(args)
       hash = args.convert_to_hash.symbolize_keys
 
-      ::Struct.new(*hash.keys, keyword_init: true).new(**hash)
+      if hash.empty?
+        ::Struct.new(nil, keyword_init: true).new
+      else
+        ::Struct.new(*hash.keys, keyword_init: true).new(**hash)
+      end
     end
   end
 end
