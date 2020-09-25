@@ -1,5 +1,7 @@
 # StructCast
 
+[![Build Status](https://travis-ci.org/yujideveloper/struct_cast.svg?branch=master)](https://travis-ci.org/yujideveloper/struct_cast)
+
 StructCast provides the refinement module that defines the method for casting to a Struct object.
 
 ## Installation
