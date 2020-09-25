@@ -1,6 +1,6 @@
 # StructCast
 
-StructCast provides the refinement module to cast method to a Struct object.
+StructCast provides the refinement module that defines the method for casting to a Struct object.
 
 ## Installation
 

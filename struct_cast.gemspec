@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Yuji Hanamura"]
   spec.email         = ["yuji.developer@gmail.com"]
 
-  spec.summary       = %q{StructCast provides the refinement module to cast method to a Struct object.}
-  spec.description   = %q{StructCast provides the refinement module to cast method to a Struct object.}
+  spec.summary       = %q{StructCast provides the refinement module that defines the method for casting to a Struct object.}
+  spec.description   = %q{StructCast provides the refinement module that defines the method for casting to a Struct object.}
   spec.homepage      = "https://github.com/yujideveloper/struct_cast"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
