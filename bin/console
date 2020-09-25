@@ -12,4 +12,5 @@ require "struct_cast"
 # Pry.start
 
 require "irb"
+ARGV.prepend "--context-mode=1"
 IRB.start(__FILE__)
