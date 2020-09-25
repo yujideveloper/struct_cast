@@ -19,7 +19,7 @@ module StructCast
     refine ::Hash do
       def symbolize_keys
         self.transform_keys do |k|
-          raise ::ArgumentError, "can't convert key type to Symbol: #{k.class.name}" unless k.respond_to? :to_sym
+          raise ::TypeError, "can't convert key type to Symbol: #{k.class.name}" unless k.respond_to? :to_sym
 
           k.to_sym
         end

@@ -41,7 +41,7 @@ RSpec.describe StructCast do
       context "when args is a hash for keys containing a value that can't be converted to symbol" do
         let!(:args) { { 1 => "foo", :name => "bar" } }
 
-        it { expect { subject }.to raise_error ::ArgumentError }
+        it { expect { subject }.to raise_error ::TypeError, "can't convert key type to Symbol: Integer" }
       end
 
       context "when args is a hash-like array" do
