@@ -99,14 +99,19 @@ RSpec.describe StructCast do
       context "when args is non-hash-like object that does not respond to :to_hash or :to_h" do
         let!(:args) do
           c = Class.new do
+            def self.name
+              "Foo"
+            end
+
             def initialize(id, name)
               @id = id
               @name = name
             end
           end
+          c.new(1, "foo")
         end
 
-        it { expect { subject }.to raise_error ::TypeError }
+        it { expect { subject }.to raise_error ::TypeError, "can't convert Foo to Hash" }
       end
     end
   end
