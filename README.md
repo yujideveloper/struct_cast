@@ -1,5 +1,6 @@
 # StructCast
 
+[![Gem Version](https://badge.fury.io/rb/struct_cast.svg)](https://badge.fury.io/rb/struct_cast)
 [![Build](https://github.com/yujideveloper/struct_cast/workflows/Build/badge.svg)](https://github.com/yujideveloper/struct_cast/actions?query=workflow%3ABuild)
 [![Maintainability](https://api.codeclimate.com/v1/badges/71ddeac3ead5a224e9ed/maintainability)](https://codeclimate.com/github/yujideveloper/struct_cast/maintainability)
 
